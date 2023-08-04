@@ -8,8 +8,29 @@ print(f"{nombre} , {edad} , {estatura} , {juega_futbol}")
 #El limite de las variables float es que solamente se pueden aproximar, por ejemplo 1/3 nunca se podra expresar exactamente igual siendo un float, sin embargo se podra aproximar.
 
 #Un entero no podra expresarse como un decimal porque solo se tomara la parte entera.
+contador=0
+numfinal=0
+lista=list()
 print("Tercer punto: ")
-print("Por favor ingrese un numero para aplicar la formula de los primeros n numeros pares")
+print("Ingrese un numero para sumar sus primeros pares")
 n=int(input())
-suma=n*(n+1)
-print(f"El resultado aplicando la formula de la suma de los primeros n numeros pares es: {suma}")
+if n%2==0:
+    while contador<n:
+        contador=contador+2
+        lista.append(contador)
+    print(lista)
+    c=len(lista)
+    for x in range(c):
+        numfinal=numfinal+lista[x]
+    print(numfinal)
+else:
+    n=n-1
+    while contador<n:
+        contador=contador+2
+        lista.append(contador)
+    print(lista)
+    c=len(lista)
+    for x in range(c):
+        numfinal=numfinal+lista[x]
+    print(numfinal)
+    
